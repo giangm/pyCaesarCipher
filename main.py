@@ -13,7 +13,7 @@ def main():
 
     if len(sys.argv) != 4 or not sys.argv[3].isdigit():
         print(Fore.RED + Style.BRIGHT + '[!] Wrong usage...')
-        print(Fore.RED + Style.BRIGHT + '[!] Sample usage - python3 main.py -e "Hello World" 4')
+        print(Fore.RED + Style.BRIGHT + '[!] Sample usage - python3 main.py -e \'Hello World\' 4')
     else:
         print(Fore.GREEN + '[+] Starting up Caesar Cipher\n')
         time.sleep(2)
