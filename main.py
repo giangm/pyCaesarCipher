@@ -64,7 +64,7 @@ def encryption(plain_text, key):
             cipher_text += character
         else:
             # Shift character by key
-            new_character = (ord(character) + key) % 128
+            new_character = (ord(character) + key) % 128 if (ord(character) + key) % 128 <= 90 else ((ord(character) + key) % 26) + 52
 
             # Append shifted character
             cipher_text += chr(new_character)
@@ -85,7 +85,7 @@ def decryption(cipher_text, key):
             plain_text += character
         else:
             # Shift character by key
-            new_character = (ord(character) - key) % 128
+            new_character = (ord(character) - key) % 128 if (ord(character) - key) % 128 >= 65 else ((ord(character) - key) % 26) + 52
 
             # Append shifted character
             plain_text += chr(new_character)
